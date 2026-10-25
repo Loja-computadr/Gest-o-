@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muana Milunga | Gestão Clínica</title>
+<style>
+:root{--navy:#123b72;--blue:#1769d2;--cyan:#e8f2ff;--mint:#2f80ed;--bg:#f4f8ff;--ink:#172b4d;--muted:#687b96;--line:#dce7f5;--white:#fff;--gold:#f4b740;--red:#c44c58}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Inter,Arial,sans-serif;color:var(--ink)}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0;font-weight:700;border-radius:10px;padding:11px 14px}.btn-main{background:var(--blue);color:white}.btn-main:hover{background:#0f4fa8}.btn-light{background:#e7f1ff;color:#1457a6}.btn-delete{background:#fff0f0;color:var(--red);padding:7px 9px;font-size:12px}.shell{min-height:100vh}.topnav{background:var(--navy);color:white;padding:17px 26px;display:flex;justify-content:space-between;align-items:center;gap:16px}.identity{display:flex;align-items:center;gap:12px}.logo{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,#ffffff,#8fc1ff);display:grid;place-items:center;color:#123b72;font-weight:900;font-size:21px}.identity h1{font-size:18px;margin:0}.identity p{font-size:12px;color:#d9e8ff;margin:4px 0 0}.top-meta{text-align:right;font-size:12px;color:#d9e8ff}.top-meta strong{display:block;color:white;font-size:14px;margin-bottom:4px}.navstrip{background:white;border-bottom:1px solid var(--line);padding:0 26px;display:flex;gap:5px;overflow-x:auto}.tab{white-space:nowrap;background:transparent;color:#627187;border-radius:0;padding:15px 14px;border-bottom:3px solid transparent}.tab.active{color:var(--blue);border-bottom-color:var(--blue)}main{max-width:1450px;margin:auto;padding:25px}.welcome{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:20px}.welcome h2{margin:0;font-size:25px;letter-spacing:-.5px}.welcome p{margin:7px 0 0;color:var(--muted);font-size:14px}.datebox{background:white;border:1px solid var(--line);border-radius:12px;padding:11px 14px;font-size:13px;color:#53647a}.privacy{border:1px solid #f0d9a2;background:#fff9e9;color:#795b19;padding:12px 15px;border-radius:12px;font-size:12px;line-height:1.55;margin-bottom:20px}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:20px}.metric{background:white;border:1px solid var(--line);border-radius:16px;padding:18px;position:relative;overflow:hidden}.metric:after{content:"";position:absolute;width:60px;height:60px;border-radius:50%;right:-18px;top:-20px;background:var(--tint,#eaf0ff)}.metric-head{font-size:12px;color:var(--muted);display:flex;justify-content:space-between;gap:8px;position:relative;z-index:1}.metric-icon{font-size:17px}.metric-value{font-size:27px;font-weight:800;margin-top:15px;letter-spacing:-.7px}.metric-foot{font-size:11px;color:var(--muted);margin-top:6px}.columns{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(290px,.7fr);gap:18px}.card{background:white;border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:18px}.card-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:17px}.card-head h3{margin:0;font-size:16px}.card-head p{margin:5px 0 0;color:var(--muted);font-size:12px}.tag{font-size:11px;font-weight:700;background:#e8f2ff;color:#1457a6;border-radius:20px;padding:6px 9px}.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:12px;font-weight:700;color:#526176}.field input,.field select,.field textarea{border:1px solid #dbe3ed;border-radius:9px;padding:11px 12px;background:#fff;color:var(--ink);min-width:0;width:100%;outline-color:#6aa5f5}.field textarea{min-height:88px;resize:vertical}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}.tablewrap{overflow-x:auto}table{border-collapse:collapse;width:100%;min-width:570px}th,td{text-align:left;padding:12px 10px;border-bottom:1px solid #edf0f5;font-size:12px}th{color:#7a8798;font-weight:700;background:#f0f6ff}td strong{font-size:12px}.empty{text-align:center;color:var(--muted);padding:24px}.section{display:none}.section.active{display:block}.mini-list{display:flex;flex-direction:column;gap:0}.mini-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid #edf0f5}.mini-row:last-child{border:0}.mini-row span{font-size:12px;color:var(--muted)}.mini-row strong{font-size:13px}.subtle{font-size:12px;color:var(--muted);line-height:1.5}.filter{max-width:250px;margin-bottom:14px}.toolbar{display:flex;gap:9px;flex-wrap:wrap}.notes-item{padding:15px 0;border-bottom:1px solid #edf0f5}.notes-item:last-child{border:0}.notes-item p{white-space:pre-wrap;font-size:13px;line-height:1.5}.footer{text-align:center;font-size:11px;color:#8b97a8;padding:10px}.bottom-nav{display:none}
+@media(max-width:950px){main{padding:19px}.metrics{grid-template-columns:repeat(2,1fr)}.columns{grid-template-columns:1fr}.topnav{padding:15px 18px}.navstrip{padding:0 12px}}
+@media(max-width:600px){.topnav{align-items:flex-start}.top-meta{display:none}.identity h1{font-size:16px}.navstrip{padding:0 8px}.tab{padding:13px 11px;font-size:12px}main{padding:14px}.welcome{align-items:flex-start;flex-direction:column}.welcome h2{font-size:22px}.datebox{width:100%}.metric{padding:14px}.metric-value{font-size:23px}.metric-head{font-size:11px}.card{padding:14px}.formgrid{grid-template-columns:1fr}.field.full{grid-column:auto}.toolbar button{flex:1}.privacy{font-size:11px}}
+</style>
+
+<style id="tema-azul-completo">
+:root {
+  --navy: #0b3d91 !important;
+  --blue: #1266d5 !important;
+  --cyan: #e8f2ff !important;
+  --mint: #2d7fe8 !important;
+  --bg: #edf5ff !important;
+  --ink: #12315b !important;
+  --muted: #5e7595 !important;
+  --line: #cfe0f7 !important;
+  --white: #ffffff !important;
+}
+html, body { background: #edf5ff !important; color: #12315b !important; }
+body, main, .main, .content, .page, .workspace, .dashboard, .section,
+.panel, .card, .stat, .metric, .form-card, .table-wrap, .report-card,
+.modal-content, .calendar, .list, .empty-state {
+  border-color: #cfe0f7 !important;
+}
+header, .topbar, .sidebar, nav, .navbar, .side-nav, .brand,
+footer, .footer, .bottom-bar, .bottom-nav {
+  background: #0b3d91 !important;
+  color: #ffffff !important;
+}
+button, .btn, input[type="submit"], input[type="button"], .primary,
+.active, .nav-link.active, .tab.active {
+  background-color: #1266d5 !important;
+  border-color: #1266d5 !important;
+  color: #ffffff !important;
+}
+a { color: #1266d5; }
+input, select, textarea {
+  background: #ffffff !important;
+  color: #12315b !important;
+  border-color: #b9d2f3 !important;
+}
+table thead, th, .table-header, .section-title, .card-header {
+  background: #dcecff !important;
+  color: #0b3d91 !important;
+}
+table tbody tr:nth-child(even) { background: #f1f7ff !important; }
+table tbody tr:nth-child(odd) { background: #ffffff !important; }
+.badge, .pill, .tag { background: #e2efff !important; color: #0b3d91 !important; }
+</style>
+
+</head>
+<body>
+<div class="shell">
+<header class="topnav">
+ <div class="identity"><div class="logo">M+</div><div><h1>Clínica Muana Milunga</h1><p>Painel administrativo e financeiro</p></div></div>
+ <div class="top-meta"><strong>Gestão da clínica</strong><span id="headerDate"></span></div>
+</header>
+<nav class="navstrip">
+ <button class="tab active" data-page="dashboard">Visão geral</button>
+ <button class="tab" data-page="consultas">Atendimentos</button>
+ <button class="tab" data-page="cadastro">Cadastro de pacientes</button>
+ <button class="tab" data-page="financeiro">Financeiro</button>
+ <button class="tab" data-page="agenda">Agenda e notas</button>
+ <button class="tab" data-page="exportar">Relatórios e cópias</button>
+</nav>
+<main>
+ <div class="welcome"><div><h2 id="pageTitle">Visão geral</h2><p id="pageSubtitle">Acompanhe os principais números da clínica num só lugar.</p></div><div class="datebox" id="todayLabel"></div></div>
+ <div class="privacy"><strong>Privacidade:</strong> esta é uma ferramenta administrativa local, sem conta nem servidor. Os registos ficam neste navegador e dispositivo. Não introduza diagnósticos, resultados de exames ou outros dados médicos sensíveis. Para utilização clínica real, use um sistema apropriado, com acesso protegido e cópias de segurança seguras.</div>
+
+ <section id="dashboard" class="section active">
+  <div class="metrics">
+   <div class="metric" style="--tint:#e3efff"><div class="metric-head"><span>Atendimentos hoje</span><span class="metric-icon">＋</span></div><div class="metric-value" id="mVisits">0</div><div class="metric-foot">Registos do dia</div></div>
+   <div class="metric" style="--tint:#e3efff"><div class="metric-head"><span>Novos pacientes</span><span class="metric-icon">♙</span></div><div class="metric-value" id="mPatients">0</div><div class="metric-foot">Cadastros de hoje</div></div>
+   <div class="metric" style="--tint:#edf4ff"><div class="metric-head"><span>Receitas do dia</span><span class="metric-icon">↗</span></div><div class="metric-value" id="mIncome">0 Kz</div><div class="metric-foot">Valores registados</div></div>
+   <div class="metric" style="--tint:#e7f1ff"><div class="metric-head"><span>Despesas do dia</span><span class="metric-icon">↘</span></div><div class="metric-value" id="mExpense">0 Kz</div><div class="metric-foot">Despesas registadas</div></div>
+  </div>
+  <div class="columns">
+   <div class="card"><div class="card-head"><div><h3>Movimento recente</h3><p>Atendimentos registados para hoje</p></div><button class="btn-light" onclick="go('consultas')">+ Novo atendimento</button></div><div class="tablewrap"><table><thead><tr><th>Hora</th><th>Paciente/código</th><th>Serviço</th><th>Estado</th><th>Valor</th></tr></thead><tbody id="todayRows"></tbody></table></div></div>
+   <div class="card"><div class="card-head"><div><h3>Resumo financeiro</h3><p>Movimento do dia</p></div><span class="tag">Hoje</span></div><div class="mini-list"><div class="mini-row"><span>Receitas totais</span><strong id="dIncome">0 Kz</strong></div><div class="mini-row"><span>Despesas totais</span><strong id="dExpense">0 Kz</strong></div><div class="mini-row"><span>Saldo estimado</span><strong id="dBalance">0 Kz</strong></div></div><p class="subtle">O saldo é calculado com os registos introduzidos e não substitui a contabilidade oficial.</p></div>
+  </div>
+ </section>
+
+ <section id="consultas" class="section"><div class="columns">
+  <div class="card"><div class="card-head"><div><h3>Novo atendimento</h3><p>Registe a visita e o serviço administrativo.</p></div><span class="tag">Atendimento</span></div>
+   <form id="visitForm"><div class="formgrid">
+    <div class="field"><label for="vDate">Data</label><input id="vDate" type="date" required></div><div class="field"><label for="vTime">Hora</label><input id="vTime" type="time"></div>
+    <div class="field"><label for="vPatient">Código ou nome abreviado</label><input id="vPatient" required placeholder="Ex.: PAC-023"></div><div class="field"><label for="vService">Tipo de serviço</label><select id="vService"><option>Consulta geral</option><option>Consulta de especialidade</option><option>Enfermagem</option><option>Análises/exames</option><option>Tratamento</option><option>Vacinação</option><option>Outro</option></select></div>
+    <div class="field"><label for="vStaff">Profissional responsável (opcional)</label><input id="vStaff" placeholder="Nome do profissional"></div><div class="field"><label for="vStatus">Estado do atendimento</label><select id="vStatus"><option>Concluído</option><option>Em espera</option><option>Reagendado</option><option>Cancelado</option></select></div>
+    <div class="field"><label for="vAmount">Valor cobrado (Kz)</label><input id="vAmount" type="number" min="0" step=".01" value="0" required></div><div class="field"><label for="vPay">Pagamento</label><select id="vPay"><option>Numerário</option><option>Transferência</option><option>TPA/Multicaixa</option><option>Isento</option><option>Parcial</option><option>Outro</option></select></div>
+    <div class="field full"><label for="vNote">Nota administrativa (opcional)</label><textarea id="vNote" placeholder="Ex.: recibo emitido, marcar nova data. Sem detalhes médicos."></textarea></div>
+   </div><div class="actions"><button class="btn-main" type="submit">Guardar atendimento</button><button class="btn-light" type="reset">Limpar</button></div></form>
+  </div>
+  <div class="card"><div class="card-head"><div><h3>Histórico de atendimentos</h3><p>Pesquise os registos por data.</p></div><span class="tag" id="vCount">0 registos</span></div><div class="field filter"><label for="vFilter">Data</label><input type="date" id="vFilter"></div><div class="tablewrap"><table><thead><tr><th>Data/hora</th><th>Paciente/código</th><th>Serviço</th><th>Valor</th><th></th></tr></thead><tbody id="visitRows"></tbody></table></div></div>
+ </div></section>
+
+ <section id="cadastro" class="section"><div class="columns">
+  <div class="card"><div class="card-head"><div><h3>Cadastro administrativo</h3><p>Crie uma referência para localizar os registos.</p></div></div><div class="privacy">Recolha apenas os dados necessários. Para processos clínicos, utilize um sistema de saúde protegido.</div>
+  <form id="patientForm"><div class="formgrid"><div class="field"><label for="pDate">Data de cadastro</label><input id="pDate" type="date" required></div><div class="field"><label for="pCode">Código interno</label><input id="pCode" required placeholder="PAC-001"></div><div class="field"><label for="pName">Nome (opcional)</label><input id="pName" placeholder="Nome ou iniciais"></div><div class="field"><label for="pPhone">Telefone (opcional)</label><input id="pPhone" type="tel" placeholder="+244 ..."></div><div class="field"><label for="pYear">Ano de nascimento (opcional)</label><input id="pYear" type="number" min="1900" max="2100" placeholder="AAAA"></div><div class="field"><label for="pSource">Origem</label><select id="pSource"><option>Recomendação</option><option>Paciente habitual</option><option>Internet/redes sociais</option><option>Passou pela clínica</option><option>Outra</option></select></div></div><div class="actions"><button class="btn-main" type="submit">Guardar cadastro</button></div></form></div>
+  <div class="card"><div class="card-head"><div><h3>Lista de pacientes</h3><p>Referências administrativas guardadas.</p></div><span class="tag" id="pCount">0</span></div><div class="tablewrap"><table><thead><tr><th>Data</th><th>Código</th><th>Nome</th><th>Telefone</th><th></th></tr></thead><tbody id="patientRows"></tbody></table></div></div>
+ </div></section>
+
+ <section id="financeiro" class="section"><div class="columns">
+  <div class="card"><div class="card-head"><div><h3>Lançamento financeiro</h3><p>Registe receitas e despesas.</p></div></div>
+  <div class="field" style="max-width:240px;margin-bottom:14px"><label for="fKind">Tipo de lançamento</label><select id="fKind"><option value="income">Receita / entrada</option><option value="expense">Despesa / saída</option></select></div>
+  <form id="financeForm"><div class="formgrid"><div class="field"><label for="fDate">Data</label><input id="fDate" type="date" required></div><div class="field"><label for="fCategory">Categoria</label><select id="fCategory"><option>Consulta</option><option>Análises/exames</option><option>Enfermagem/tratamento</option><option>Medicamentos/consumíveis</option><option>Material clínico</option><option>Salários</option><option>Renda</option><option>Energia/água</option><option>Internet/telefone</option><option>Manutenção</option><option>Transporte</option><option>Outra</option></select></div><div class="field"><label for="fAmount">Valor (Kz)</label><input id="fAmount" type="number" min="0" step=".01" required></div><div class="field"><label for="fPayment">Forma de pagamento</label><select id="fPayment"><option>Numerário</option><option>Transferência</option><option>TPA/Multicaixa</option><option>Outro</option></select></div><div class="field full"><label for="fDesc">Descrição</label><textarea id="fDesc" required placeholder="Motivo do lançamento ou referência do recibo"></textarea></div></div><div class="actions"><button class="btn-main" type="submit">Guardar lançamento</button></div></form></div>
+  <div class="card"><div class="card-head"><div><h3>Livro de caixa</h3><p>Entradas e saídas registadas.</p></div><span class="tag" id="fCount">0 lançamentos</span></div><div class="tablewrap"><table><thead><tr><th>Data</th><th>Tipo/categoria</th><th>Valor</th><th></th></tr></thead><tbody id="financeRows"></tbody></table></div><p class="subtle">Evite lançar novamente como receita um pagamento que já esteja incluído no atendimento; isso duplicaria o total.</p></div>
+ </div></section>
+
+ <section id="agenda" class="section"><div class="columns">
+  <div class="card"><div class="card-head"><div><h3>Agenda e lembretes</h3><p>Anote tarefas administrativas e compromissos.</p></div></div><form id="noteForm"><div class="formgrid"><div class="field"><label for="nDate">Data</label><input id="nDate" type="date" required></div><div class="field"><label for="nTitle">Título</label><input id="nTitle" required placeholder="Ex.: encomendar luvas"></div><div class="field full"><label for="nText">Detalhes</label><textarea id="nText" required placeholder="Tarefas, lembretes, contactos a fazer... Não inclua dados médicos."></textarea></div></div><div class="actions"><button class="btn-main" type="submit">Adicionar lembrete</button></div></form></div>
+  <div class="card"><div class="card-head"><div><h3>Lembretes guardados</h3><p>Lista de tarefas da clínica.</p></div><span class="tag" id="nCount">0 notas</span></div><div id="notesList"></div></div>
+ </div></section>
+
+ <section id="exportar" class="section"><div class="card"><div class="card-head"><div><h3>Relatórios e cópias de segurança</h3><p>Escolha um período para resumir o movimento.</p></div></div>
+ <div class="formgrid" style="max-width:620px;margin-bottom:16px"><div class="field"><label for="rFrom">Data inicial</label><input id="rFrom" type="date"></div><div class="field"><label for="rTo">Data final</label><input id="rTo" type="date"></div></div>
+ <div class="toolbar"><button class="btn-main" onclick="buildReport()">Atualizar relatório</button><button class="btn-light" onclick="exportCSV()">Exportar CSV</button><button class="btn-light" onclick="backup()">Descarregar cópia de segurança</button><button class="btn-light" onclick="document.getElementById('restore').click()">Restaurar cópia</button><input type="file" id="restore" accept=".json,application/json" hidden></div>
+ <div class="metrics" style="margin-top:20px"><div class="metric"><div class="metric-head">Atendimentos</div><div class="metric-value" id="rVisits">0</div></div><div class="metric"><div class="metric-head">Pacientes cadastrados</div><div class="metric-value" id="rPatients">0</div></div><div class="metric"><div class="metric-head">Receitas</div><div class="metric-value" id="rIncome">0 Kz</div></div><div class="metric"><div class="metric-head">Saldo estimado</div><div class="metric-value" id="rBalance">0 Kz</div></div></div>
+ <p class="subtle">A cópia JSON pode ser usada para transferir os registos para outro dispositivo. Guarde-a num local privado e seguro.</p></div></section>
+ <div class="footer">Clínica Muana Milunga · Painel administrativo · Valores em kwanzas (Kz)</div>
+</main>
+</div>
+<script>
+const KEY='muana_milunga_painel_v2';let db={visits:[],patients:[],ledger:[],notes:[]};try{let raw=localStorage.getItem(KEY);if(raw)db={...db,...JSON.parse(raw)}}catch(e){}
+const $=id=>document.getElementById(id),today=()=>{let d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`},uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,7);
+const money=n=>new Intl.NumberFormat('pt-AO',{maximumFractionDigits:2}).format(Number(n)||0)+' Kz',esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])),dt=d=>d?d.split('-').reverse().join('/'): '—';
+function save(){localStorage.setItem(KEY,JSON.stringify(db));render()}
+function go(id){document.querySelectorAll('.section').forEach(s=>s.classList.toggle('active',s.id===id));document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.page===id));const title={dashboard:['Visão geral','Acompanhe os principais números da clínica num só lugar.'],consultas:['Atendimentos','Registe visitas, serviços e o estado de cada atendimento.'],cadastro:['Cadastro de pacientes','Mantenha referências administrativas organizadas.'],financeiro:['Financeiro','Acompanhe entradas, saídas e lançamentos da clínica.'],agenda:['Agenda e notas','Organize tarefas e lembretes administrativos.'],exportar:['Relatórios e cópias','Consulte resultados por período e proteja os seus registos.']}[id];$('pageTitle').textContent=title[0];$('pageSubtitle').textContent=title[1]}
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>go(b.dataset.page)));
+function empty(n,msg='Sem registos para mostrar.'){return `<tr><td class="empty" colspan="${n}">${msg}</td></tr>`}
+function sum(a,k){return a.reduce((s,x)=>s+Number(x[k]||0),0)}
+function incomeFor(date){return sum(db.ledger.filter(x=>x.kind==='income'&&(!date||x.date===date)),'amount')+sum(db.visits.filter(x=>x.status==='Concluído'&&(!date||x.date===date)),'amount')}
+function expenseFor(date){return sum(db.ledger.filter(x=>x.kind==='expense'&&(!date||x.date===date)),'amount')}
+function render(){let t=today(),v=db.visits.filter(x=>x.date===t),p=db.patients.filter(x=>x.date===t),inc=incomeFor(t),exp=expenseFor(t);
+$('mVisits').textContent=v.length;$('mPatients').textContent=p.length;$('mIncome').textContent=money(inc);$('mExpense').textContent=money(exp);$('dIncome').textContent=money(inc);$('dExpense').textContent=money(exp);$('dBalance').textContent=money(inc-exp);
+$('todayRows').innerHTML=v.length?v.slice().reverse().map(x=>`<tr><td>${esc(x.time||'—')}</td><td><strong>${esc(x.patient)}</strong></td><td>${esc(x.service)}</td><td>${esc(x.status)}</td><td>${money(x.amount)}</td></tr>`).join(''):empty(5,'Nenhum atendimento registado hoje.');
+let vf=$('vFilter').value,vis=vf?db.visits.filter(x=>x.date===vf):db.visits.slice().sort((a,b)=>b.date.localeCompare(a.date));$('vCount').textContent=vis.length+' registos';$('visitRows').innerHTML=vis.length?vis.map(x=>`<tr><td>${dt(x.date)}<br>${esc(x.time||'—')}</td><td><strong>${esc(x.patient)}</strong><br><span class="subtle">${esc(x.staff||'')}</span></td><td>${esc(x.service)}<br><span class="subtle">${esc(x.status)}</span></td><td>${money(x.amount)}</td><td><button class="btn-delete" onclick="del('visits','${x.id}')">Apagar</button></td></tr>`).join(''):empty(5);
+$('pCount').textContent=db.patients.length+' registos';$('patientRows').innerHTML=db.patients.length?db.patients.slice().sort((a,b)=>b.date.localeCompare(a.date)).map(x=>`<tr><td>${dt(x.date)}</td><td><strong>${esc(x.code)}</strong></td><td>${esc(x.name||'—')}</td><td>${esc(x.phone||'—')}</td><td><button class="btn-delete" onclick="del('patients','${x.id}')">Apagar</button></td></tr>`).join(''):empty(5);
+$('fCount').textContent=db.ledger.length+' lançamentos';$('financeRows').innerHTML=db.ledger.length?db.ledger.slice().sort((a,b)=>b.date.localeCompare(a.date)).map(x=>`<tr><td>${dt(x.date)}</td><td><strong>${x.kind==='income'?'Receita':'Despesa'} · ${esc(x.category)}</strong><br><span class="subtle">${esc(x.description)}</span></td><td>${money(x.amount)}</td><td><button class="btn-delete" onclick="del('ledger','${x.id}')">Apagar</button></td></tr>`).join(''):empty(4);
+$('nCount').textContent=db.notes.length+' notas';$('notesList').innerHTML=db.notes.length?db.notes.slice().sort((a,b)=>b.date.localeCompare(a.date)).map(x=>`<div class="notes-item"><div style="display:flex;justify-content:space-between;gap:10px"><div><strong>${esc(x.title)}</strong><div class="subtle">${dt(x.date)}</div></div><button class="btn-delete" onclick="del('notes','${x.id}')">Apagar</button></div><p>${esc(x.text)}</p></div>`).join(''):'<p class="subtle">Ainda não há lembretes guardados.</p>';buildReport()}
+function del(type,id){if(confirm('Apagar este registo?')){db[type]=db[type].filter(x=>x.id!==id);save()}}
+$('visitForm').addEventListener('submit',e=>{e.preventDefault();db.visits.push({id:uid(),date:$('vDate').value,time:$('vTime').value,patient:$('vPatient').value.trim(),service:$('vService').value,staff:$('vStaff').value.trim(),status:$('vStatus').value,amount:Number($('vAmount').value),payment:$('vPay').value,note:$('vNote').value.trim()});e.target.reset();$('vDate').value=today();$('vAmount').value='0';save();alert('Atendimento guardado.')});
+$('patientForm').addEventListener('submit',e=>{e.preventDefault();db.patients.push({id:uid(),date:$('pDate').value,code:$('pCode').value.trim(),name:$('pName').value.trim(),phone:$('pPhone').value.trim(),year:$('pYear').value,source:$('pSource').value});e.target.reset();$('pDate').value=today();save();alert('Cadastro guardado.')});
+$('financeForm').addEventListener('submit',e=>{e.preventDefault();db.ledger.push({id:uid(),kind:$('fKind').value,date:$('fDate').value,category:$('fCategory').value,amount:Number($('fAmount').value),payment:$('fPayment').value,description:$('fDesc').value.trim()});e.target.reset();$('fDate').value=today();save();alert('Lançamento guardado.')});
+$('noteForm').addEventListener('submit',e=>{e.preventDefault();db.notes.push({id:uid(),date:$('nDate').value,title:$('nTitle').value.trim(),text:$('nText').value.trim()});e.target.reset();$('nDate').value=today();save();alert('Lembrete guardado.')});
+$('vFilter').addEventListener('change',render);
+function buildReport(){let f=$('rFrom').value||'0000-01-01',t=$('rTo').value||'9999-12-31',ok=x=>x.date>=f&&x.date<=t;let v=db.visits.filter(ok),p=db.patients.filter(ok),income=sum(db.ledger.filter(x=>x.kind==='income'&&ok(x)),'amount')+sum(v.filter(x=>x.status==='Concluído'),'amount'),expense=sum(db.ledger.filter(x=>x.kind==='expense'&&ok(x)),'amount');$('rVisits').textContent=v.length;$('rPatients').textContent=p.length;$('rIncome').textContent=money(income);$('rBalance').textContent=money(income-expense)}
+function download(content,name,type){let b=new Blob([content],{type}),u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download=name;a.click();URL.revokeObjectURL(u)}
+function exportCSV(){let rows=[['Tipo','Data','Paciente/código','Categoria','Valor','Estado','Descrição'],...db.visits.map(x=>['Atendimento',x.date,x.patient,x.service,x.amount,x.status,x.note]),...db.ledger.map(x=>[x.kind==='income'?'Receita':'Despesa',x.date,'',x.category,x.amount,x.payment,x.description])];download('\ufeff'+rows.map(r=>r.map(v=>'"'+String(v??'').replace(/"/g,'""')+'"').join(';')).join('\r\n'),'muana-milunga-relatorio.csv','text/csv;charset=utf-8')}
+function backup(){download(JSON.stringify(db,null,2),'muana-milunga-copia.json','application/json')}
+$('restore').addEventListener('change',async e=>{let f=e.target.files[0];if(!f)return;try{let d=JSON.parse(await f.text());if(!d.visits||!d.patients||!d.ledger||!d.notes)throw Error();if(confirm('A cópia vai substituir os registos atuais. Continuar?')){db=d;save();alert('Cópia restaurada.')}}catch(err){alert('Ficheiro JSON inválido para este painel.')}e.target.value=''});
+$('headerDate').textContent=new Date().toLocaleDateString('pt-PT');$('todayLabel').textContent=new Date().toLocaleDateString('pt-PT',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+['vDate','pDate','fDate','nDate'].forEach(x=>$(x).value=today());$('rFrom').value=today();$('rTo').value=today();render();
+</script>
+</body>
+</html>
